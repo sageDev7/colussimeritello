@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="Colussi Meritello Abogados — Estudio jurídico boutique en San Juan especializado en Derecho Empresarial: laboral, marcas, societario, contratos internacionales y más.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Colussi Meritello Abogados — Derecho Empresarial, San Juan">
+<meta property="og:description" content="Estudio jurídico boutique especializado en Derecho Empresarial. Asesoramiento integral para empresas, pymes y emprendimientos.">
+<meta property="og:image" content="https://i.imgur.com/iK5CEPS.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>Colussi Meritello Abogados — Derecho Empresarial, San Juan</title>
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="./styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Colussi Meritello Abogados",
+  "image": "./og.png",
+  "telephone": "+5492643160711",
+  "email": "estudiocolussimeritello@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rivadavia 664 Este",
+    "addressLocality": "San Juan",
+    "addressRegion": "San Juan",
+    "addressCountry": "AR"
+  },
+  "areaServed": "Argentina",
+  "openingHours": "Mo-Fr 09:00-13:00, Mo-Fr 17:30-21:00"
+}
+</script>
+<style>
+/* ── HERO ── */
+#hero{position:relative;background:var(--ink);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch;min-height:100vh}
+.hero-text{padding:170px 40px 90px;position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
+.hero-text-inner{max-width:620px;width:100%}
+.hero-text-inner h1{font-family:var(--fh);font-weight:800;font-size:clamp(2.3rem,4.4vw,3.7rem);line-height:1.08;letter-spacing:-.02em;color:var(--white);margin:22px 0 24px}
+.hero-text-inner h1 em{font-style:normal;color:var(--accent)}
+.hero-ctas{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.hero-photo{position:relative;margin-left:-70px;z-index:1}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.05) brightness(.85)}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(190deg,rgba(6,16,26,.25) 0%,rgba(6,16,26,.65) 100%)}
+.hero-stats-wrap{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;padding:170px 0 90px}
+.hero-stats{display:flex;flex-direction:column;align-items:center;gap:28px}
+.hero-stat{display:flex;flex-direction:column;align-items:center;gap:4px}
+.hero-stat-num{font-family:var(--fh);font-weight:800;font-size:4.4rem;line-height:1;color:var(--accent)}
+.hero-stat-label{font-family:var(--fb);font-size:.86rem;color:var(--white);font-weight:600;text-align:center}
+
+/* ── PILARES ── */
+#pilares{position:relative;padding:120px 0;overflow:hidden}
+#pilares::before{content:'';position:absolute;inset:0;background:url('./hero-bg.jpg') center 20%/cover no-repeat;filter:grayscale(100%)}
+#pilares::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,46,.88) 0%,rgba(10,30,46,.94) 100%)}
+#pilares .wrap{position:relative;z-index:1}
+
+/* ── ÁREAS DE PRÁCTICA (bento + cta) ── */
+#areas-destacadas{padding:100px 0;background:var(--surface)}
+.bento-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.bento-item{background:rgba(255,255,255,.04);border:1px solid var(--line);padding:32px 28px;transition:transform .25s var(--ease),background .25s var(--ease)}
+.bento-item:hover{transform:translateY(-4px);background:rgba(255,255,255,.07)}
+.bento-item i{font-size:28px;color:var(--accent);margin-bottom:16px;display:block}
+.bento-item h3{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:8px}
+.bento-item.featured{background:var(--navy);border-color:var(--navy)}
+.bento-item.featured:hover{background:var(--navy-dark)}
+.bento-item.featured i{color:var(--white)}
+.bento-item p{color:var(--gray);font-size:.9rem;line-height:1.55}
+.areas-cta{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:50px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
+.areas-cta p{color:var(--gray);font-size:1rem}
+
+/* ── NOSOTROS ── */
+#nosotros{padding:110px 0;background:var(--light);color:var(--light-ink)}
+#nosotros .h2{color:var(--light-ink)}
+#nosotros .p-lead{color:var(--light-gray)}
+.nosotros-inner{max-width:760px;margin:0 auto;text-align:center}
+.nosotros-inner .link-arrow{margin-top:48px}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-weight:700;color:var(--navy);margin-top:26px;transition:gap .25s var(--ease)}
+.link-arrow:hover{gap:14px}
+
+/* ── EQUIPO ── */
+#equipo{padding:100px 0;background:var(--light);color:var(--light-ink)}
+#equipo .h2{color:var(--light-ink)}
+
+/* ── FAQ ── */
+#faq{padding:100px 0;background:var(--surface)}
+#faq .eyebrow{color:var(--accent)}
+#faq .eyebrow::before{background:var(--accent)}
+#faq .h2{color:var(--white)}
+#faq .h2 em{color:var(--accent)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.15)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{position:relative;width:100%;display:flex;justify-content:center;align-items:center;padding:26px 50px;text-align:center}
+.faq-q-text{font-family:var(--fh);font-weight:700;font-size:1.05rem;color:var(--white);text-align:center;width:100%}
+.faq-icon{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .3s var(--ease)}
+.faq-item.open .faq-icon{transform:translateY(-50%) rotate(45deg)}
+.faq-a-wrap{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.faq-a{color:rgba(255,255,255,.75);font-size:.96rem;line-height:1.7;padding:0 50px 26px;text-align:center}
+
+/* ── CONTACTO ── */
+#contacto{padding:110px 0;background:var(--navy);color:var(--white)}
+.contacto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:stretch;text-align:left}
+#contacto .eyebrow{color:var(--white)}
+#contacto .eyebrow::before{background:var(--white)}
+#contacto .h2{color:var(--white)}
+#contacto .h2 em{color:var(--white);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:6px}
+#contacto .p-lead{color:rgba(255,255,255,.8);margin-left:0}
+.contacto-datos{display:flex;flex-direction:column;gap:16px;margin-top:36px;text-align:left}
+.cd-item{display:flex;align-items:center;gap:14px;font-size:.96rem;color:rgba(255,255,255,.85)}
+.cd-item i{font-size:19px;color:var(--white);flex-shrink:0}
+.cd-item span{overflow-wrap:anywhere}
+.cd-hours-wrap{display:inline}
+.contacto-card{margin-top:36px;display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);padding:44px 38px;text-align:center}
+.contacto-card i{font-size:36px;color:var(--white);margin-bottom:16px;display:block}
+.contacto-card .link-arrow i{font-size:1em;margin-bottom:0;display:inline}
+.contacto-card h3{font-family:var(--fh);font-weight:700;font-size:1.3rem;color:var(--white);margin-bottom:10px}
+.contacto-card p{color:rgba(255,255,255,.75);font-size:.94rem;margin-bottom:24px}
+.contacto-card .btn{width:100%;justify-content:center}
+.contacto-card .btn-primary{background:var(--navy-dark);color:var(--white)}
+.contacto-card .btn-primary:hover{background:var(--ink)}
+
+/* ── MAPA ── */
+#mapa-ubicacion{line-height:0}
+#mapa-ubicacion iframe{width:100%;height:460px;border:0;display:block}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-text{padding:150px 30px 50px}
+  .hero-text .eyebrow{font-size:clamp(0.6rem, calc(0.6rem + (0.78rem - 0.6rem) * (100vw - 320px) / (1024px - 320px)), 0.78rem);letter-spacing:clamp(0.12em, calc(0.12em + (0.2em - 0.12em) * (100vw - 320px) / (1024px - 320px)), 0.2em);white-space:nowrap;margin-bottom:10px}
+  .hero-photo{height:460px;margin-left:0}
+  .hero-stats-wrap{padding:0}
+  .hero-stats{gap:22px}
+}
+
+@media(max-width:768px){
+  .hero-text{text-align:center;padding:130px 24px 40px}
+  .hero-text .eyebrow::before{display:none}
+  .hero-ctas{justify-content:center}
+  .hero-ctas .btn{width:100%;max-width:300px;justify-content:center}
+  .hero-photo{height:400px}
+  .hero-stats{gap:20px}
+  .hero-stat-num{font-size:3.4rem}
+  .hero-stat-label{font-size:.78rem}
+  .bento-grid{grid-template-columns:1fr;text-align:center}
+  .areas-cta{flex-direction:column;text-align:center}
+  #equipo .sec-head{margin-bottom:80px}
+  .faq-icon{right:-6px}
+  .contacto-grid{grid-template-columns:1fr;text-align:center}
+  .contacto-card{margin-top:40px}
+  #mapa-ubicacion iframe{height:320px}
+  .contacto-datos{text-align:center;margin-left:auto;margin-right:auto}
+  .cd-item{justify-content:center}
+  .cd-item-hours{flex-wrap:wrap}
+  .cd-hours-wrap{display:contents}
+  .cd-hours-detail{flex-basis:100%;display:block;margin-top:2px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap hd-row">
+    <a href="./" class="logo">
+      <img src="./logo-sinfondo.png" alt="Colussi Meritello Abogados">
+      <span class="logo-word">Colussi<b>Meritello</b></span>
+    </a>
+    <nav class="hd-nav">
+      <a href="./">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="areas.html">Áreas de Práctica</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="hd-right">
+      <div class="hd-cta">
+        <a href="https://wa.me/5492643160711?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" class="btn btn-primary">Escribinos</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<button type="button" class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+<div class="mob-overlay" id="mobOverlay"></div>
+<nav class="mob-nav" id="mobNav">
+  <a href="./" class="mob-nav-logo">
+    <img src="./logo-sinfondo.png" alt="Colussi Meritello Abogados">
+    <span class="logo-word">Colussi<b>Meritello</b></span>
+  </a>
+  <div class="mob-nav-divider"></div>
+  <a href="./">Inicio</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="areas.html">Áreas de Práctica</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/5492643160711?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" class="btn btn-primary">Escribinos</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <div class="hero-text-inner">
+        <span class="eyebrow">Estudio Jurídico Boutique en San Juan</span>
+        <h1>Un aliado legal que piensa como&nbsp;<em>socio</em> de tu&nbsp;negocio.</h1>
+        <p class="p-lead">Asesoramiento legal integral para empresas, pymes y emprendimientos, combinando solidez técnica con mirada estratégica — para que cada decisión jurídica también sume valor comercial.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5492643160711?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" class="btn btn-primary">Escribinos por WhatsApp</a>
+          <a href="#areas-destacadas" class="btn btn-outline">Ver áreas de práctica</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <img src="./hero-bg.jpg" alt="Firma de documentos en una reunión de trabajo">
+      <div class="hero-stats-wrap">
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-num" data-target="5" data-prefix="+">0</span><span class="hero-stat-label">años de trayectoria</span></div>
+          <div class="hero-stat"><span class="hero-stat-num" data-target="18">0</span><span class="hero-stat-label">áreas de práctica</span></div>
+          <div class="hero-stat"><span class="hero-stat-num" data-target="5">0</span><span class="hero-stat-label">socios</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS (teaser) -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="nosotros-inner reveal">
+      <span class="eyebrow">Nosotros</span>
+      <h2 class="h2">Un estudio boutique, pensado para&nbsp;<em>acompañar</em>.</h2>
+      <p class="p-lead" style="margin-left:auto;margin-right:auto;text-align:center">Somos un estudio jurídico boutique con más de 5 años de trayectoria asesorando empresas, pymes y emprendimientos en distintas etapas de su desarrollo. Nuestro formato nos permite trabajar codo a codo con cada cliente, entendiendo a fondo su realidad particular antes de proponer soluciones.</p>
+      <a href="nosotros.html" class="link-arrow">Conocé más sobre nosotros <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section id="pilares">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Por qué elegirnos</span>
+      <h2 class="h2">Cercanía técnica,&nbsp;<em>visión</em> de&nbsp;negocio.</h2>
+    </div>
+    <div class="pilares-row reveal">
+      <div class="pilar-item">
+        <span class="pilar-num">01</span>
+        <h4>Mirada estratégica</h4>
+        <p>No solo resolvemos lo legal: entendemos el negocio antes de proponer una solución.</p>
+      </div>
+      <div class="pilar-item">
+        <span class="pilar-num">02</span>
+        <h4>Formato boutique</h4>
+        <p>Trabajamos codo a codo con cada cliente, sin intermediarios ni respuestas genéricas.</p>
+      </div>
+      <div class="pilar-item">
+        <span class="pilar-num">03</span>
+        <h4>Socio único</h4>
+        <p>Todas las áreas de tu empresa bajo un mismo equipo, a lo largo del tiempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁREAS DESTACADAS -->
+<section id="areas-destacadas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Áreas de práctica</span>
+      <h2 class="h2">Un socio legal para cada&nbsp;<em>etapa</em>.</h2>
+    </div>
+    <div class="bento-grid reveal">
+      <div class="bento-item featured">
+        <i class="ti ti-briefcase"></i>
+        <h3>Derecho Laboral Empresarial</h3>
+        <p>Contratación, desvinculaciones, convenios colectivos y representación en conflictos, con foco en la prevención antes que en el conflicto.</p>
+      </div>
+      <div class="bento-item">
+        <i class="ti ti-copyright"></i>
+        <h3>Marcas y Propiedad Intelectual</h3>
+        <p>Registro, renovación y defensa de marcas ante el INPI, para proteger el activo más visible de tu empresa.</p>
+      </div>
+      <div class="bento-item">
+        <i class="ti ti-building-skyscraper"></i>
+        <h3>Derecho Comercial y Societario</h3>
+        <p>Constitución de sociedades, contratos comerciales y resolución de conflictos entre socios.</p>
+      </div>
+      <div class="bento-item">
+        <i class="ti ti-world"></i>
+        <h3>Contratos Internacionales</h3>
+        <p>Negociación y redacción de contratos con contrapartes del exterior, con las cláusulas de jurisdicción bien resueltas desde el inicio.</p>
+      </div>
+      <div class="bento-item">
+        <i class="ti ti-search"></i>
+        <h3>Due Diligence para M&amp;A</h3>
+        <p>Auditoría legal integral antes de comprar, vender o fusionar una empresa.</p>
+      </div>
+      <div class="bento-item">
+        <i class="ti ti-shield-lock"></i>
+        <h3>Protección de Datos y Compliance</h3>
+        <p>Adecuación a la Ley 25.326 y políticas internas, para que el crecimiento no choque con la normativa.</p>
+      </div>
+    </div>
+    <div class="areas-cta reveal">
+      <p>Estas son algunas de nuestras áreas más consultadas — en total tenemos 18.</p>
+      <a href="areas.html" class="btn btn-primary">Ver todas las áreas</a>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<!-- Bios ilustrativas: reemplazar por las reales cuando el cliente las envíe -->
+<section id="equipo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Equipo</span>
+      <h2 class="h2">Las personas detrás del&nbsp;<em>estudio</em>.</h2>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-avatar"><img src="./team-luciana.jpg" alt="Luciana Colussi Trosch"></div>
+        <h4>Luciana Colussi Trosch</h4>
+        <p class="team-role">Socia Fundadora</p>
+        <p class="team-bio">Con foco en derecho societario y comercial, acompaña a empresas familiares en sus procesos de crecimiento y sucesión.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="./team-guillermo.jpg" alt="Guillermo Meritello Ripoll"></div>
+        <h4>Guillermo Meritello Ripoll</h4>
+        <p class="team-role">Socio Fundador</p>
+        <p class="team-bio">Especializado en derecho laboral y contratos internacionales, con mirada puesta en la prevención de riesgos.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="./team-gabriel.jpg" alt="Gabriel Silva"></div>
+        <h4>Gabriel Silva</h4>
+        <p class="team-role">Socio</p>
+        <p class="team-bio">Trabaja en propiedad intelectual y compliance, ayudando a empresas a proteger sus activos clave.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="./team-deborah.jpg" alt="Deborah Moralez"></div>
+        <h4>Deborah Moralez</h4>
+        <p class="team-role">Socia</p>
+        <p class="team-bio">Asesora en licitaciones y contratos comerciales, con experiencia en procesos con el sector público.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="./team-johana.jpg" alt="Johana Martín"></div>
+        <h4>Johana Martín</h4>
+        <p class="team-role">Socia</p>
+        <p class="team-bio">Enfocada en derecho inmobiliario e inversiones, acompañando decisiones patrimoniales de largo plazo.</p>
+      </div>
+    </div>
+    <div class="team-more reveal"><a href="equipo.html" class="link-arrow">Conocé al equipo completo <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h2">Dudas&nbsp;<em>comunes</em>.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false"><span class="faq-q-text">¿Trabajan solo con grandes empresas o también con pymes?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Trabajamos con empresas, pymes y emprendimientos en distintas etapas de su desarrollo — nuestro formato boutique se adapta a la escala de cada cliente.</p></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false"><span class="faq-q-text">¿Cómo es el proceso de trabajo?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Empezamos con una consulta inicial para entender tu situación, y a partir de ahí armamos un plan de acompañamiento a medida de tu negocio.</p></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false"><span class="faq-q-text">¿Atienden a empresas fuera de San Juan?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Sí, trabajamos tanto de forma presencial como remota con clientes de otras provincias.</p></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false"><span class="faq-q-text">¿Puedo consultarlos por una sola área puntual?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Sí — podés consultarnos por una necesidad puntual o para un acompañamiento integral, adaptamos el servicio a lo que tu empresa necesite.</p></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false"><span class="faq-q-text">¿Cómo los contacto?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Por WhatsApp es la vía más rápida — contanos tu caso y te respondemos a la brevedad.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap contacto-grid reveal">
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <h2 class="h2">Hablemos de tu&nbsp;<em>empresa</em>.</h2>
+      <p class="p-lead">Contanos qué necesita tu negocio y te respondemos a la brevedad.</p>
+      <div class="contacto-datos">
+        <div class="cd-item"><i class="ti ti-map-pin"></i><span>Rivadavia 664 Este, San Juan Capital</span></div>
+        <div class="cd-item"><i class="ti ti-phone"></i><span>+54 264 316-0711 · +54 264 439-0518</span></div>
+        <div class="cd-item"><i class="ti ti-mail"></i><span>estudiocolussimeritello@gmail.com</span></div>
+        <div class="cd-item cd-item-hours"><i class="ti ti-clock"></i><span class="cd-hours-wrap"><span>Lunes a viernes</span><span class="cd-hours-detail"> de 9:00 a 13:00 y de 17:30 a 21:00</span></span></div>
+      </div>
+    </div>
+    <div class="contacto-card">
+      <i class="ti ti-message-circle"></i>
+      <h3>¿Listo para empezar?</h3>
+      <p>Escribinos por WhatsApp y contanos qué necesita tu negocio.</p>
+      <a href="https://wa.me/5492643160711?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" class="btn btn-primary">Escribinos por WhatsApp</a>
+      <a href="contacto.html" class="link-arrow" style="color:var(--white);margin-top:18px;align-self:center">Ver página de contacto <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section id="mapa-ubicacion">
+  <iframe src="https://www.google.com/maps?q=Rivadavia+664,+San+Juan,+Argentina&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Colussi Meritello Abogados"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-logo">
+        <a href="./" class="logo">
+          <img src="./logo-sinfondo.png" alt="Colussi Meritello Abogados">
+          <span class="logo-word">Colussi<b>Meritello</b></span>
+        </a>
+        <p class="f-tagline">Estudio jurídico boutique especializado en Derecho Empresarial. Asesoramiento integral para empresas, pymes y emprendimientos en San Juan.</p>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Navegación</h4>
+          <a href="./">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="areas.html">Áreas de Práctica</a>
+          <a href="equipo.html">Equipo</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="f-col">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/5492643160711" target="_blank" rel="noopener">+54 264 316-0711</a>
+          <span>+54 264 439-0518</span>
+          <a href="mailto:estudiocolussimeritello@gmail.com">estudiocolussimeritello@gmail.com</a>
+          <span>Rivadavia 664 Este, San Juan Capital</span>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div class="f-bottom-row">
+        <p>&copy; 2026 Colussi Meritello Abogados.<br class="rights-break"> Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://instagram.com/sageeDev" target="_blank" rel="noopener">@sageeDev</a></p>
+        <p><a href="privacidad.html">Política de Privacidad</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-wrap" id="fabWrap">
+  <button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="ti ti-chevron-up"></i>
+  </button>
+  <a href="https://wa.me/5492643160711?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" class="fab-wa" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.getElementById('header');
+  const fabWrap = document.getElementById('fabWrap');
+  const siteFooter = document.querySelector('footer');
+  let footerVisible = false;
+  function updateFloats() {
+    const y = window.scrollY;
+    header.classList.toggle('sc', y > 20);
+    fabWrap.classList.toggle('visible', y > window.innerHeight * 0.5 && !footerVisible);
+  }
+  window.addEventListener('scroll', updateFloats, { passive: true });
+  updateFloats();
+  if (siteFooter && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { footerVisible = e.isIntersecting; });
+      updateFloats();
+    }, { threshold: 0 }).observe(siteFooter);
+  }
+
+  const hamburger = document.getElementById('hamburger');
+  const mobNav = document.getElementById('mobNav');
+  const mobOverlay = document.getElementById('mobOverlay');
+  function openNav() { mobNav.classList.add('open'); mobOverlay.classList.add('open'); hamburger.classList.add('is-open'); document.body.classList.add('nav-open'); }
+  function closeNav() { mobNav.classList.remove('open'); mobOverlay.classList.remove('open'); hamburger.classList.remove('is-open'); document.body.classList.remove('nav-open'); }
+  hamburger.addEventListener('click', () => mobNav.classList.contains('open') ? closeNav() : openNav());
+  mobOverlay.addEventListener('click', closeNav);
+  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobNav.classList.contains('open')) closeNav();
+  });
+
+  const reduceMotionCount = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const heroStatNums = document.querySelectorAll('.hero-stat-num');
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const prefix = el.dataset.prefix || '';
+    if (reduceMotionCount) { el.textContent = prefix + target; return; }
+    const duration = 1300;
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  heroStatNums.forEach(animateCount);
+
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    const btn = item.querySelector('.faq-q');
+    const wrap = item.querySelector('.faq-a-wrap');
+    btn.addEventListener('click', function () {
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      wrap.style.maxHeight = isOpen ? wrap.scrollHeight + 'px' : '0px';
+    });
+  });
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('.faq-item.open .faq-a-wrap').forEach(function (wrap) {
+      wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    });
+  });
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* ══════════════════════════════════════════════
+   Colussi Meritello Abogados — Estilos compartidos
+   (header, nav mobile, footer, botones)
+   ══════════════════════════════════════════════ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;color-scheme:only dark;overflow-x:clip}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{background:none;border:none;cursor:pointer;font:inherit}
+
+:root{
+  --ink:#0A1E2E;
+  --navy:#225072;
+  --navy-dark:#153447;
+  --surface:#122C40;
+  --line:rgba(255,255,255,.12);
+  --white:#FFFFFF;
+  --accent:#3E86C4;
+  --accent-dark:#2D699F;
+  --gray:#AABBC8;
+  --steel:#7C97AC;
+  --light:#EEF2F6;
+  --light-ink:#132433;
+  --light-gray:#5C6B78;
+  --fh:'Onest',sans-serif;
+  --fb:'Inter',sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+
+body{background:var(--ink);color:var(--white);font-family:var(--fb);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+
+.eyebrow{font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:'';width:24px;height:1.5px;background:var(--accent);flex-shrink:0}
+.h2{font-family:var(--fh);font-weight:800;font-size:clamp(2rem,3.6vw,3rem);line-height:1.15;letter-spacing:-.02em;color:var(--white)}
+.h2 em{font-style:normal;color:var(--accent)}
+.p-lead{font-size:1.08rem;color:var(--gray);line-height:1.75;max-width:580px;margin-top:20px}
+.sec-head{max-width:660px;margin:0 auto 60px;text-align:center}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--fb);font-weight:700;font-size:.92rem;
+  padding:16px 30px;border-radius:0;transition:transform .18s var(--ease),background .2s,color .2s,border-color .2s;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:var(--white)}
+.btn-outline:hover{background:rgba(255,255,255,.08)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-dark);transform:translateY(-1px)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ── HEADER (sticky, estándar) ── */
+#header{position:fixed;top:0;left:0;right:0;z-index:200;padding:24px 0;background:transparent;transition:background .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease)}
+#header.sc{background:rgba(10,30,46,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.hd-cta .btn{padding-top:11px;padding-bottom:11px}
+.hd-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:inline-flex;align-items:center;gap:12px;color:var(--white)}
+.logo img{width:40px;height:40px;flex-shrink:0;object-fit:contain}
+.logo-word{font-family:var(--fh);font-weight:800;font-size:1.02rem;letter-spacing:-.01em;line-height:1.15}
+.logo-word b{display:block;font-weight:800}
+.hd-nav{display:flex;align-items:center;gap:6px}
+.hd-nav a{font-family:var(--fb);font-weight:600;font-size:.92rem;color:rgba(255,255,255,.78);padding:9px 16px;border-radius:0;transition:color .2s,background .2s}
+.hd-nav a:hover{color:var(--white)}
+.hd-right{display:flex;align-items:center;gap:22px}
+.hamburger{display:none;width:44px;height:44px;flex-direction:column;align-items:center;justify-content:center;gap:5.5px}
+.hamburger span{display:block;width:22px;height:2.2px;background:var(--white);transition:transform .3s var(--ease),opacity .3s}
+.hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.is-open span:nth-child(2){opacity:0}
+.hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── NAV MOBILE (drawer estándar) ── */
+.mob-overlay{position:fixed;inset:0;background:rgba(5,15,24,.6);z-index:250;opacity:0;visibility:hidden;transition:opacity .3s}
+.mob-overlay.open{opacity:1;visibility:visible}
+.mob-nav{position:fixed;top:0;right:0;bottom:0;width:82%;max-width:320px;z-index:260;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:27px;padding:36px;transform:translateX(100%);transition:transform .4s var(--ease)}
+.mob-nav.open{transform:translateX(0)}
+.mob-nav-logo{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--white)}
+.mob-nav-logo img{width:47px;height:47px}
+.mob-nav-logo .logo-word{font-size:1.2rem;text-align:center}
+.mob-nav-divider{width:100%;max-width:180px;height:1px;background:rgba(255,255,255,.15)}
+.mob-nav a{font-family:var(--fh);font-weight:700;font-size:1.17rem;color:var(--white)}
+.mob-nav .btn{width:100%;justify-content:center;padding:14px 27px;font-size:1.17rem}
+body.nav-open{overflow:hidden}
+
+/* ── PAGE HEAD (páginas internas) ── */
+.page-head{padding:180px 0 90px;background:var(--ink);color:var(--white);text-align:center}
+.page-head .eyebrow{justify-content:center}
+.page-head .h2{color:var(--white)}
+.page-head .p-lead{margin:20px auto 0;text-align:center}
+.content-section{padding:100px 0}
+
+/* ── PILARES (compartido: home + nosotros.html) ── */
+.pilares-row{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
+.pilar-item{border-top:2px solid var(--accent);padding-top:22px}
+.pilar-num{font-family:var(--fh);font-weight:800;font-size:.86rem;color:var(--steel)}
+.pilar-item h4{font-family:var(--fh);font-weight:700;font-size:1.3rem;color:var(--white);margin:14px 0 10px}
+.pilar-item p{color:var(--gray);font-size:.96rem;line-height:1.65}
+
+/* ── LISTA DE ÁREAS (compartido: areas.html) ── */
+.area-list{max-width:980px;margin:0 auto}
+.area-row{display:grid;grid-template-columns:60px 300px 1fr;gap:24px;align-items:center;padding:22px 14px;border-bottom:1px solid var(--line);transition:transform .25s var(--ease);color:var(--white)}
+.area-row:first-child{border-top:1px solid var(--line)}
+.area-row:hover{transform:translateX(10px)}
+.area-n{font-family:var(--fh);font-weight:800;font-size:1.3rem;color:var(--steel);transition:color .25s var(--ease)}
+.area-row:hover .area-n{color:var(--accent)}
+.area-t{font-family:var(--fh);font-weight:700;font-size:1.02rem;color:var(--white)}
+.area-d{color:var(--gray);font-size:.9rem;line-height:1.5}
+
+/* ── EQUIPO (compartido: home + equipo.html) ── */
+.team-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.team-card{flex:0 0 190px;text-align:center}
+.team-avatar{width:110px;height:110px;border-radius:50%;margin:0 auto 18px;overflow:hidden;background:var(--navy)}
+.team-avatar img{width:100%;height:100%;object-fit:cover}
+.team-card h4{font-family:var(--fh);font-weight:700;font-size:1.02rem;color:var(--light-ink)}
+.team-role{color:var(--navy);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:6px 0 12px}
+.team-bio{color:var(--light-gray);font-size:.88rem;line-height:1.55}
+.team-more{text-align:center;margin-top:48px}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);color:rgba(255,255,255,.62);padding:100px 0 0}
+.f-top{display:flex;justify-content:space-between;gap:44px;padding-bottom:80px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.f-logo{display:flex;flex-direction:column;gap:18px;max-width:340px}
+.f-logo .logo{color:var(--white)}
+.f-logo img{width:42px;height:42px}
+.f-tagline{font-size:.94rem;line-height:1.65}
+.f-cols{display:flex;gap:70px;flex-wrap:wrap}
+.f-col h4{font-family:var(--fb);font-weight:700;font-size:.76rem;color:var(--white);text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px}
+.f-col a,.f-col span{display:block;font-size:.94rem;margin-bottom:11px;color:rgba(255,255,255,.62);transition:color .2s;overflow-wrap:anywhere}
+.f-col a:hover{color:var(--accent)}
+.f-bottom{display:flex;flex-direction:column;gap:12px;padding:26px 0}
+.f-bottom-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.f-bottom p{font-size:.8rem;color:rgba(255,255,255,.4)}
+.rights-break{display:none}
+.f-bottom a{color:rgba(255,255,255,.62)}
+.f-bottom a:hover{color:var(--accent)}
+
+/* ── FAB / WHATSAPP FLOTANTE ── */
+.fab-wrap{position:fixed;bottom:26px;right:26px;z-index:90;display:flex;flex-direction:column;gap:14px;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s}
+.fab-wrap.visible{opacity:1;visibility:visible;transform:none}
+.fab-wa,.fab-top{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.fab-wa{background:#25D366}
+.fab-wa i{font-size:27px;color:#fff}
+.fab-top{background:var(--navy);border:1.5px solid rgba(255,255,255,.2);transition:background .2s}
+.fab-top:hover{background:var(--navy-dark)}
+.fab-top i{font-size:22px;color:var(--white)}
+
+/* ── RESPONSIVE (compartido) ── */
+@media(max-width:1024px){
+  .wrap{padding:0 30px}
+  .hd-nav{display:none}
+  .hd-cta{display:none}
+  .hamburger{display:flex;position:fixed;top:24px;right:30px;z-index:270}
+  .hd-row{position:relative;justify-content:flex-end;min-height:44px}
+  .hd-row .logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+  .page-head{padding-top:150px}
+  .pilares-row{grid-template-columns:1fr;gap:36px}
+  .area-row{grid-template-columns:44px 1fr;grid-template-areas:"n t" ". d"}
+  .area-n{grid-area:n}
+  .area-t{grid-area:t}
+  .area-d{grid-area:d}
+}
+
+@media(max-width:768px){
+  .wrap{padding:0 24px}
+  .sec-head{text-align:center;margin-left:auto;margin-right:auto}
+  .p-lead{margin-left:auto;margin-right:auto}
+  .eyebrow{justify-content:center}
+  .hd-right .btn{display:none}
+  .hamburger{right:24px}
+  .pilar-item{text-align:center}
+  .area-row{text-align:center}
+  .area-row:hover{transform:none}
+  .area-row{grid-template-columns:1fr;grid-template-areas:"n" "t" "d";gap:6px;justify-items:center}
+  .team-card{flex:0 0 260px}
+
+  .f-top{flex-direction:column;align-items:center;text-align:center;gap:44px}
+  .f-logo{align-items:center}
+  .f-cols{justify-content:center;text-align:center;gap:44px}
+  .f-bottom-row{flex-direction:column;align-items:center;text-align:center;gap:8px}
+  .rights-break{display:block}
+}
