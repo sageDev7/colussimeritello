@@ -112,8 +112,8 @@ body.nav-open{overflow:hidden}
 
 /* ── EQUIPO (compartido: home + equipo.html) ── */
 .team-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
-.team-card{flex:0 0 190px;text-align:center}
-.team-avatar{width:110px;height:110px;border-radius:50%;margin:0 auto 18px;overflow:hidden;background:var(--navy)}
+.team-card{flex:1 1 200px;max-width:260px;text-align:center}
+.team-avatar{width:100%;max-width:220px;aspect-ratio:1/1;border-radius:50%;margin:0 auto 18px;overflow:hidden;background:var(--navy)}
 .team-avatar img{width:100%;height:100%;object-fit:cover}
 .team-card h4{font-family:var(--fh);font-weight:700;font-size:1.02rem;color:var(--light-ink)}
 .team-role{color:var(--navy);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:6px 0 12px}
@@ -175,7 +175,7 @@ footer{background:var(--surface);color:rgba(255,255,255,.62);padding:100px 0 0}
   .area-row{text-align:center}
   .area-row:hover{transform:none}
   .area-row{grid-template-columns:1fr;grid-template-areas:"n" "t" "d";gap:6px;justify-items:center}
-  .team-card{flex:0 0 260px}
+  .team-card{flex:1 1 200px;max-width:260px}
 
   .f-top{flex-direction:column;align-items:center;text-align:center;gap:44px}
   .f-logo{align-items:center}
